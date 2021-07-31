@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test:dev": "mocha --timeout 5000 ./test/specs.js --watch",
+    "test": "mocha",
+    "test:dev": "DATABASE_URL=postgress://localhost/acme_db_test npm run test -- --watch",
     "start:dev": "nodemon server"
   },
   "keywords": [],
@@ -17,6 +18,8 @@
     "chai": "^4.3.4",
     "mocha": "^9.0.3",
     "nodemon": "^2.0.12",
+    "pg": "^8.7.1",
+    "sequelize": "^6.6.5",
     "supertest": "^6.1.4"
   },
   "dependencies": {
